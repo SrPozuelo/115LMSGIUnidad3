@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Ejemplo 2 DOM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ejemplo 2 DOM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
 
-<body>
-    <div id="app">
-        <div class="header">
-            <h1>Titular</h1>
-        </div>
-        <p>Párrafo de descripción</p>
-        <a href="/">Enlace</a>
-    </div>
-    <div class="container">
-        <div class="sandbox">
-            <div class="item item-1">item-1</div>
-            <div class="item item-2">item-2</div>
-            <div class="item item-3">
-                <div class="subitem">item-3 1</div>
+    <body>
+        <div id="app">
+            <div class="header">
+                <h1>Titular</h1>
             </div>
-            <!--item-3-->
+            <p>Párrafo de descripción</p>
+            <a href="/">Enlace</a>
         </div>
-        <!--sandbox-->
-    </div>
-    <!--container-->
-    <script>
-    </script>
+        <div class="container">
+            <div class="sandbox">
+                <div class="item item-1">item-1</div>
+                <div class="item item-2">item-2</div>
+                <div class="item item-3">
+                    <div class="subitem">item-3 1</div>
+                </div>
+                <!--item-3-->
+            </div>
+            <!--sandbox-->
+        </div>
+        <!--container-->
+        <script>
+            const item3=document.querySelector(".item.item-3");
+            item3.closest(".container").style.backgroundColor="lightblue";
+            item3.closest(".sandbox").style.margin="10px";
+            item3.closest(".sandbox").style.padding="10px";
+            item3.closest(".sandbox").style.border="solid black 1px";
+        </script>
     </body>
-    </html>
+</html>
