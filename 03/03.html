@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejemplo 3 DOM</title>
-</head>
-<body>
-    <div id="app">
-        <div class="header">
-            <h1>Titular</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ejemplo 3 DOM</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="header">
+                <h1>Titular</h1>
+            </div>
+            <p>Párrafo de descripción</p>
+            <a href="/">Enlace</a>
         </div>
-        <p>Párrafo de descripción</p>
-        <a href="/">Enlace</a>
-    </div>
-    <script>
-    </script>
-</body>
+        <script>
+            const app=document.querySelector('body').childNodes.length;
+            const body=document.querySelector('body');
+            console.log('Numero de nodos hijos: ',app);
+            console.log("Nodos hijos del body: ",body.childNodes);
+            console.log("Nodo padre del body: ",body.parentNode);
+        </script>
+    </body>
 </html>

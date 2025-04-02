@@ -30,5 +30,18 @@
             <div>Esto es un desplegable que está colapsado.</div>
         </details>
     </div>
+    <script>
+        var container=document.querySelector(".container");
+        var strong=document.querySelector("strong");
+        var mark=document.querySelector("mark");
+        var hidden=document.querySelectorAll("p[hidden]")[0];
+        var detail=document.querySelector("details");
+        container.firstChild.textContent="Adios a todos. Soy Manz.";
+        container.lastElementChild.innerHTML+="<p>Saludos a todos.</p>";
+        strong.textContent="Manzano";
+        hidden.removeAttribute("hidden");
+        mark.style.display="block";
+        detail.open=true;
+    </script>
 </body>
 </html>
